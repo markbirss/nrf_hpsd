@@ -18,7 +18,7 @@ rm -f .pio/build/$1/firmware.*
 # The shell vars the build tool expects to find
 export APP_VERSION=$VERSION
 
-basename=nrf52_factory_erase-$1-$VERSION
+basename=nrf_hpsd-$1-$VERSION
 
 pio run --environment $1 # -v
 SRCELF=.pio/build/$1/firmware.elf
