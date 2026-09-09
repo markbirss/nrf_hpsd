@@ -11,7 +11,11 @@ builds same as meshtastic firmware with 2 variants available
 ```
 chmod +x ./bin/*.sh
 chmod +x ./bin/*.py
+
+# then
+
 ./bin/build-nrf52.sh s140_nrf52_611_softdevice
+# or
 ./bin/build-nrf52.sh s140_nrf52_730_softdevice
 ```
 then find files in release directory
