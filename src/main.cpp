@@ -2,7 +2,7 @@
 #include <InternalFileSystem.h>
 #include <Adafruit_TinyUSB.h> 
 
-#define TEST_PIN  17  // Arduino pin 3 maps directly to physical nRF52840 pin P0.17
+#define TEST_PIN  17  // Arduino pin 17 maps directly to physical nRF52840 pin P0.17
 
 void setup() {
     Serial.begin(115200);
