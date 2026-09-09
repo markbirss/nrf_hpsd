@@ -3,6 +3,8 @@ nRF52 Hardware Power State Diagnostics
 
 Diagnostic firmware to detect nRF52 UICR REGOUT0 state to ensure 3v3 gpio ouput when pins are high
 
+Connect up a volt meter to the TEST_PIN and measure the output voltage
+
 builds same as meshtastic firmware with 2 variants available
 
 * s140_nrf52_611_softdevice (RAK, LilyGo, Heltec Node T114, etc)
