@@ -75,20 +75,20 @@ void setup() {
 
     // --- HARDWARE LATCH CODE FOR MULTIMETER MEASUREMENT ---
     
-    // Configure P0.03 as an Output
+    // Configure P0.17 as an Output
     pinMode(TEST_PIN, OUTPUT);
     
-    // Force High-Drive mode on P0.03 so it can maintain stable voltage against meter impedance
+    // Force High-Drive mode on P0.17 so it can maintain stable voltage against meter impedance
     NRF_GPIO->PIN_CNF[TEST_PIN] = (GPIO_PIN_CNF_DIR_Output << GPIO_PIN_CNF_DIR_Pos) |
                                   (GPIO_PIN_CNF_INPUT_Disconnect << GPIO_PIN_CNF_INPUT_Pos) |
                                   (GPIO_PIN_CNF_PULL_Disabled << GPIO_PIN_CNF_PULL_Pos) |
                                   (GPIO_PIN_CNF_DRIVE_H0H1 << GPIO_PIN_CNF_DRIVE_Pos) | // High drive '0', High drive '1'
                                   (GPIO_PIN_CNF_SENSE_Disabled << GPIO_PIN_CNF_SENSE_Pos);
 
-    // Actively latch P0.03 to logical HIGH state
+    // Actively latch P0.17 to logical HIGH state
     digitalWrite(TEST_PIN, HIGH);
     
-    Serial.println("\n[STATUS] Pin P0.03 is now actively latched HIGH.");
+    Serial.println("\n[STATUS] Pin P0.17 is now actively latched HIGH.");
     Serial.println("[MEASURE] Check voltage between P0.17 and GND with your multimeter.");
 }
 
